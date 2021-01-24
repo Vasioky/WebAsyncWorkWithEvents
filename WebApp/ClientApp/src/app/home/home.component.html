@@ -1,0 +1,29 @@
+<h1>Start Work!</h1>
+<p>Welcome to my awesome app:</p>
+<p>
+  <label>x:</label> <input type="number" [(ngModel)]="x" />
+</p>
+<p>
+  <label>y:</label> <input type="number" [(ngModel)]="y" />
+</p>
+<button (click)="onStart()" [disabled]="workIsDone">Start</button>
+<button (click)="onClean()">Clean</button>
+<p *ngIf="work">work id: {{work.id}}</p>
+<table *ngIf="work && work.batches.length">
+  <thead>
+    <tr>
+      <th>
+        Batch Id
+      </th>
+      <th *ngFor="let v of heders()">{{v}}</th>
+      <th>Result</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let batch of work.batches">
+      <td>{{batch.id}}</td>
+      <td *ngFor="let item of batch.items">{{item}}</td>
+      <td>{{batch.result}}</td>
+    </tr>
+  </tbody>
+</table>
