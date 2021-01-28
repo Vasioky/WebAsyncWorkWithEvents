@@ -9,7 +9,7 @@ using WebAPI1.Models;
 namespace WebAPI1.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20210124205937_mig1")]
+    [Migration("20210124223418_mig1")]
     partial class mig1
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -27,8 +27,8 @@ namespace WebAPI1.Migrations
                     b.Property<string>("InternalData")
                         .HasColumnType("TEXT");
 
-                    b.Property<int?>("Result")
-                        .HasColumnType("INTEGER");
+                    b.Property<decimal?>("Result")
+                        .HasColumnType("TEXT");
 
                     b.Property<int?>("WorkId")
                         .HasColumnType("INTEGER");

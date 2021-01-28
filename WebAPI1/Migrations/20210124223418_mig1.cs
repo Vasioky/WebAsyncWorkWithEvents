@@ -28,7 +28,7 @@ namespace WebAPI1.Migrations
                     Id = table.Column<int>(nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
                     InternalData = table.Column<string>(nullable: true),
-                    Result = table.Column<int>(nullable: true),
+                    Result = table.Column<decimal>(nullable: true),
                     WorkId = table.Column<int>(nullable: true)
                 },
                 constraints: table =>

@@ -26,7 +26,7 @@ namespace WebAPI1.Services
         {
             while (!stoppingToken.IsCancellationRequested)
             {
-                var scope = provider.CreateScope();
+                using var scope = provider.CreateScope();
                 var dbCotext = scope.ServiceProvider.GetService<AppDbContext>();
                 var work = dbCotext.Works.Include(x => x.Batches).FirstOrDefault(x => x.Status == WorkStatus.New);
                 if (work == null)

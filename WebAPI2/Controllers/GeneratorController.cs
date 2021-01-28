@@ -29,7 +29,7 @@ namespace WebAPI2.Controllers
             for (int i = 0; i < count; i++)
             {
                 var delay = rand.Next(5, 10);
-                var number = rand2.Next(1, 100);
+                var number = rand2.Next(1, 10);
                 await Task.Delay(delay);
                 yield return number;
             }

@@ -27,6 +27,7 @@ namespace WebAPI1.Services
             foreach (var item in batch.Items)
             {
                 result *= item;
+                Console.WriteLine($"{result}");
             }
             
             batch.Result = result;

@@ -2,6 +2,7 @@
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
+using System.Numerics;
 using System.Text.Json.Serialization;
 
 namespace WebAPI1.Models
@@ -23,6 +24,6 @@ namespace WebAPI1.Models
         [JsonIgnore]
         public string InternalData { get; set; }
 
-        public int? Result { get; set; }
+        public decimal? Result { get; set; }
     }
 }

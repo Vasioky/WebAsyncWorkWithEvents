@@ -34,7 +34,7 @@ export class HomeComponent implements OnInit {
       });
   }
   onMessage(batch: Batch) {
-    debugger;
+    console.log(batch);
     const index = this.work.batches.findIndex(b => b.id == batch.id);
     this.work.batches[index] = batch;
   }

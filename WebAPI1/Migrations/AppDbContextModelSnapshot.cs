@@ -25,8 +25,8 @@ namespace WebAPI1.Migrations
                     b.Property<string>("InternalData")
                         .HasColumnType("TEXT");
 
-                    b.Property<int?>("Result")
-                        .HasColumnType("INTEGER");
+                    b.Property<decimal?>("Result")
+                        .HasColumnType("TEXT");
 
                     b.Property<int?>("WorkId")
                         .HasColumnType("INTEGER");
